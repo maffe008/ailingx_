@@ -3,7 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
 
 from ailingx.core.forms import SignUpForm
-
+from ailingx.core.models import Area
 
 @login_required
 def home(request):
@@ -29,3 +29,8 @@ def signup(request):
 
 def index(request):
     return render(request, 'index.html')
+
+
+def usecase(request):
+    areas = Area.objects.all()
+    return render(request, 'usecase.html', {'areas': areas})

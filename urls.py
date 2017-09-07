@@ -27,5 +27,7 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
     url(r'^signup/$', core_views.signup, name='signup'),
 
+    url(r'^usecase/$', core_views.usecase, name='usecase'),
+
     url(r'^admin/', admin.site.urls),
 ]

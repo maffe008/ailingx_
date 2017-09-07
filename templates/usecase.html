@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>All Areas:</h1>
+    {%  for area in areas %}
+    <h2>{{ area }}</h2>
+    {%  endfor %}
+{% endblock %}
