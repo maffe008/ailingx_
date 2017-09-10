@@ -1,8 +1,16 @@
 {% extends 'base.html' %}
 
+{% block title %}Ailingx{% endblock %}
+
 {% block content %}
-    <h1>All Areas:</h1>
-    {%  for area in areas %}
-    <h2>{{ area }}</h2>
-    {%  endfor %}
+    <div id="particles" class="test">
+      <div id="intro">
+        {%  for area in areas %}
+        <h1 id="indexh1">{{ area }}</h1>
+            {% for block in area.block_set.all %}
+                <h2 id="indexh2">{{ block }}</h2>
+            {% endfor %}
+        {%  endfor %}
+      </div>
+    </div>
 {% endblock %}

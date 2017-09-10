@@ -34,3 +34,23 @@ def index(request):
 def usecase(request):
     areas = Area.objects.all()
     return render(request, 'usecase.html', {'areas': areas})
+
+
+def feature(request):
+    return render(request, 'feature.html')
+
+
+def blog(request):
+    return render(request, 'blog.html')
+
+
+def team(request):
+    return render(request, 'team.html')
+
+
+def joinus(request):
+    return render(request, 'joinus.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')
