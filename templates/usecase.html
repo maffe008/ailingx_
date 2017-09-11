@@ -9,6 +9,9 @@
         <h1 id="indexh1">{{ area }}</h1>
             {% for block in area.block_set.all %}
                 <h2 id="indexh2">{{ block }}</h2>
+                {% for cell in block.cell_set.all %}
+                    <h3>{{ cell }}</h3>
+                {% endfor %}
             {% endfor %}
         {%  endfor %}
       </div>
