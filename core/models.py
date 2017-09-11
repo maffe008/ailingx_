@@ -48,6 +48,7 @@ class Cell(models.Model):
     location = models.CharField('Cell location', max_length=60)
     info = models.TextField('Cell Information', max_length=500)
     sqm = models.IntegerField('Cell Square meter')
+    user = models.ManyToManyField(User)
 
     def __unicode__(self):
         return self.name

@@ -13,7 +13,10 @@ main{
     width: 100%;
     height:100%
 }
-#header{
+#baseheader{
     font-family: "Microsoft YaHei UI";
-    font-size: large ;
+    font-size: medium ;
+}
+#rightest{
+    padding-right: 45px;
 }

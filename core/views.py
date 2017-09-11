@@ -1,13 +1,18 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
 
 from ailingx.core.forms import SignUpForm
 from ailingx.core.models import Area
 
+
+
 @login_required
 def home(request):
-    return render(request, 'home.html')
+    curuser = request.user
+    cells = curuser.cell_set.all()
+    return render(request, 'home.html', {'curuser': curuser, 'cells': cells})
 
 
 def signup(request):

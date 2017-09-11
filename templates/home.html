@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
+{% block title %}用户面板{% endblock %}
+
 {% block content %}
-  <h2>Welcome, {{ user.get_full_name }} <small>{{ user.username }}</small>!</h2>
-  <p>Your birth date: {{ user.profile.birth_date }}</p>
+    <br>
+    <br>
+  <h2>Welcome, {{ curuser.get_full_name }}!</h2>
+  <p>Your location: {{ curuser.profile.location }}</p>
+    {% for cell in cells %}
+        <h3>{{ cell }}|{{ cell.block }}|{{ cell.block.area }}</h3>
+    {% endfor %}
 {% endblock %}

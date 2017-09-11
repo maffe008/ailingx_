@@ -84,12 +84,15 @@ body {
 
 }
 #indexh1{
-  font-size: 85px;
+  font-size: 68px;
   color: #ffffff;
 }
 #indexh2{
-  font-size: 48px;
+  font-size: 36px;
   color: #ffffff;
+}
+#indexdemo{
+  font-size: 24px;
 }
 h1 {
   text-transform: uppercase;

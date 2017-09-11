@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from ailingx.core import views as core_views
+from demo import views,urls
 
 urlpatterns = [
     url(r'^$', core_views.index, name='index'),
@@ -38,4 +39,7 @@ urlpatterns = [
     url(r'^contact/$', core_views.contact, name='contact'),
 
     url(r'^admin/', admin.site.urls),
+
+    url(r'^demo/', include('demo.urls', namespace='demo')),
+
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
